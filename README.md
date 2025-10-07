@@ -7,7 +7,216 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+🚗 Car Showroom Management System
 
+A Laravel-based web application designed for managing a car showroom.
+It includes features for admins to manage cars, users, purchases, and test drives, while customers can browse cars, book test drives, and purchase vehicles.
+
+🌟 Features
+For Admins
+
+🖥 Admin Dashboard with stats and quick links
+
+🚘 Manage Cars: Add, edit, and delete cars
+
+👥 Manage Users: View, edit, or remove customer accounts
+
+🧾 Manage Purchases: View and update payment statuses
+
+🧪 Manage Test Drives: Approve or reject test drive requests
+
+📊 View all customer activities in one place
+
+For Customers
+
+🔍 Browse all available cars
+
+🧪 Book a test drive
+
+💳 Purchase a car after test drive approval
+
+✏️ Add special notes for the test drive
+
+📜 View booking and purchase history
+
+🗂 Project Structure
+
+carshowroom/
+├── app/
+│   ├── Http/Controllers/
+│   │   ├── CarController.php
+│   │   ├── TestDriveController.php
+│   │   ├── PurchaseController.php
+│   │   └── UserController.php
+│   └── Models/
+│       ├── Car.php
+│       ├── TestDrive.php
+│       └── Purchase.php
+├── database/
+│   ├── migrations/
+│   │   ├── create_cars_table.php
+│   │   ├── create_test_drives_table.php
+│   │   └── create_purchases_table.php
+├── resources/
+│   └── views/
+│       ├── dashboard.blade.php
+│       ├── cars/
+│       ├── purchases/
+│       ├── testdrives/
+│       └── landing.blade.php
+├── routes/
+│   └── web.php
+├── public/
+│   ├── images/
+│   └── storage/
+└── README.md
+
+⚙️ Installation
+Requirements
+
+Ensure you have the following installed:
+
+PHP 8.1.25
+
+Composer 2.x
+
+MySQL 8.0+ or MariaDB
+
+Node.js & npm
+
+Laravel 10.x
+
+Step-by-Step Setup
+
+Clone the Repository
+
+git clone https://github.com/your-username/carshowroom.git
+cd carshowroom
+
+
+Install Dependencies
+
+composer install
+npm install
+
+
+Create Environment File
+
+cp .env.example .env
+
+
+Update the following variables in .env:
+
+DB_DATABASE=carshowroom
+DB_USERNAME=root
+DB_PASSWORD=
+
+
+Run Migrations
+
+php artisan migrate
+
+
+Storage Link for Images
+
+php artisan storage:link
+
+
+Run the Application
+
+php artisan serve
+
+
+Visit the app in your browser:
+
+http://127.0.0.1:8000
+
+👥 User Roles
+Role	Access
+Admin	Full access to manage cars, users, test drives, and purchases
+Customer	Browse cars, book test drives, and purchase cars
+
+Default Admin credentials:
+
+Email: admin@example.com
+Password: password
+
+🗄 Database Schema
+Tables
+
+users – Stores customer and admin info
+
+cars – Stores all car details
+
+test_drives – Tracks test drive bookings
+
+purchases – Tracks car purchases and payment status
+
+contacts – Stores customer inquiries
+
+🖼 Screenshots
+Landing Page
+
+Admin Dashboard
+
+Car Management
+
+🔐 Security
+
+Passwords are hashed using Laravel's bcrypt
+
+Middleware ensures role-based access control
+
+CSRF protection enabled for all forms
+
+🛠 API Routes
+Method	Endpoint	Description
+GET	/cars	List all cars
+POST	/test-drive	Book a test drive
+POST	/purchase	Confirm purchase
+GET	/dashboard	Admin dashboard
+🧪 Test Drive to Purchase Flow
+
+Customer books a test drive.
+
+Admin approves/rejects the request.
+
+If approved, the customer can purchase the car.
+
+Purchase data is saved to the database with pending payment status.
+
+Admin can update the payment status to paid.
+
+🤝 Contributing
+
+Contributions are welcome!
+
+Fork the repo
+
+Create a new branch:
+
+git checkout -b feature-name
+
+
+Commit your changes and push:
+
+git push origin feature-name
+
+
+Create a Pull Request 🎉
+
+📜 License
+
+This project is licensed under the MIT License.
+See the LICENSE
+ file for more details.
+
+👨‍💻 Author
+
+Developed by Kundan
+If you have any questions or suggestions, feel free to reach out!
+
+Would you like me to generate a LICENSE file for your project as well?
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
