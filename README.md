@@ -155,10 +155,11 @@ purchases – Tracks car purchases and payment status
 contacts – Stores customer inquiries
 
 🖼 Screenshots
-Landing Page
+Login Page
+<img width="1366" height="662" alt="1" src="https://github.com/user-attachments/assets/adfa3043-daa7-479b-b551-3b8155079274" />
 
 Admin Dashboard
-
+<img width="1339" height="643" alt="2" src="https://github.com/user-attachments/assets/fd2dea9a-8d0b-41f3-be77-098165955e9f" />
 Car Management
 
 🔐 Security
